@@ -5,7 +5,7 @@
 
     BoxLayout:
         orientation: 'vertical'
-        size_hint: (1, 0.6)
+        size_hint: (1, 0.8)
 
         Label:
             text: 'Restaurant List'
@@ -33,12 +33,12 @@
 
     BoxLayout:
         orientation: 'horizontal'
-        size_hint: (1, 0.2)
+        size_hint: (1, 0.07)
         spacing: 5
 
         TextInput:
             id: restaurant_name
-            hint_text: 'Enter Restaurant Name'
+            hint_text: 'Enter...'
             multiline: False
             size_hint_x: 0.7
             size_hint_y: 1
@@ -48,30 +48,30 @@
             font_size: 18
 
         Button:
-            text: 'Add Restaurant'
+            text: 'Add'
             size_hint_x: 0.3
             size_hint_y: 1
             on_press: root.add_restaurant()
 
     BoxLayout:
         orientation: 'horizontal'
-        size_hint: (1, 0.1)
+        size_hint: (1, 0.07)
 
         Button:
-            text: 'Select Restaurant'
+            text: 'Choose'
             size_hint_x: 0.3
             size_hint_y: 1
             on_press: root.select_restaurant()
 
         Label:
             id: selected_restaurant
-            text: 'Selected Restaurant'
+            text: 'Chosen One'
             size_hint_x: 0.7
             size_hint_y: 1
             font_size: 18
 
     Button:
-        text: 'Delete Restaurants'
-        size_hint: (0.2, 0.1)
+        text: 'Delete'
+        size_hint: (0.2, 0.06)
         pos_hint: {'right': 1, 'y': 0}
         on_press: root.delete_restaurants()
